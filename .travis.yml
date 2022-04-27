@@ -1,0 +1,15 @@
+sodo: required
+services:
+  - docker
+before-install:
+  - docker build -t tag_name -f Dockerfile.dev .
+script:
+  - docker run tag_name npm run test -- -- coverage
+
+deploy:
+  provider: azure_web_apps
+  username: ronyaburaihan       # If AZURE_WA_USERNAME isn't set
+  password: rony@12345678   # If AZURE_WA_PASSWORD isn't set
+  site: 20.204.149.139       # If AZURE_WA_SITE isn't set
+  on:
+    branch: main
