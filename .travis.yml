@@ -10,6 +10,6 @@ deploy:
   provider: azure_web_apps
   username: ronyaburaihan       # If AZURE_WA_USERNAME isn't set
   password: rony@12345678   # If AZURE_WA_PASSWORD isn't set
-  site: 20.204.149.139       # If AZURE_WA_SITE isn't set
+  site: '20.204.149.139'       # If AZURE_WA_SITE isn't set
   on:
     branch: main
